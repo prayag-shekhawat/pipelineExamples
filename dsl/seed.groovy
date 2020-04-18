@@ -22,7 +22,7 @@ def createDeploymentJob(jobName, repoUrl) {
 def createTestJob(jobName, repoUrl) {
 	multibranchPipelineJob(jobName) {
 		branchSources {
-			git {
+			git credentialsId: 'fab1633f-9ec8-4e41-9e04-43609d9a53de' {
 				remote(repoUrl)
 				includes('*')
 			}
